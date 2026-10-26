@@ -1,0 +1,1 @@
+Welcome to my website, this is so that my friends can learn more about me! I learnt a lot about HTML with this one, it took a lot longer than expected mainly because of bugs, but I really enjoyed making cool gimmicks :D
