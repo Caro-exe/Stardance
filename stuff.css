@@ -100,6 +100,7 @@ nav a.active{
 #cd {
     height:100px;
     width: 100px;
+    border: none;
     padding: 0;
     background: transparent; 
     cursor: pointer;
