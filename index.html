@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stuff.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <title> My skibidi sigma web </title>
+</head>
+<script> 
+    function showTab(tabID) {
+        document.querySelectorAll('section').forEach(function(section){section.classList.remove('active');});
+        document.getElementById(tabID).classList.add('active')
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.classList.toggle (
+                'active',
+                link.getAttribute('href') === '#' + tabID 
+        )
+        });
+
+        
+    }
+</script>
+
+
+
+
+<body>
+<div class="title">
+    <h1>
+        <center> ☆Welcome to My Amazing Website☆</center>
+    </h1>
+</div>
+    <nav>
+        <center> 
+        <a href="#doodles" class = "active" onclick="showTab('doodles')"> ★Doodles★ </a>
+        <a href="#space" onclick="showTab('space')"> ★Space★</a>
+        <a href="#music" onclick="showTab('music')"> ★Music★</a>
+        </center>
+    </nav>
+<div class="panel">
+    <p>
+        <center> About me: I like drawing STEM, music and space! :D 
+        Click on the tabs to learn more about my interests... </center>
+    </p>
+    <center> <img src="IsAnyoneOutThere (1).jpg" alt=": - )" height="250" width="400"> </center>
+</div>
+<section id="doodles" class="active">
+    <div class="panel">
+        <center> <H1> ★Art is awesome!★ </H1> </center>
+        <center>
+        <p>
+            Here is some of my doodles! And also my ARTFIGHT :0. I draw on procreate :3
+        </p>
+        </center>
+        <center>
+        <img src="doodles.JPG" alt="imagine the mona lisa or smth" class = "circle"> 
+        <img src="doodles.JPG" alt= "imagine another mona lisa" class = "circle">
+        <img src="duudles.JPG" alt="imagine a not mona lisa" class = "circle">
+        </center>
+        <br>
+        <center> <a href="https://artfight.net/"> My ArtFight</a> </center>
+    </div>
+</section>
+
+
+<section id="space">
+    <div class="panel">
+        <center> <H1>★Space is interesting!★</H1> </center>
+        <center>
+        <p>
+            Here are some nebulas, try and guess what animal each nebula is named after, 
+            <br> then hover over the image to see the answer :0
+        </p>
+        </center>
+        <center>
+        <img src="catnebula.jpg" alt="catpaw.jpeg" class = "circle" 
+        onmouseenter="this.src='catpaw.jpeg'; this.alt='Cat Paw!'"
+        onmouseleave="this.src='catnebula.jpg'; this.alt='imagine a nebula'" > 
+        <img src="Crab_Nebula.jpg" alt="crab.jpg" class = "circle"
+        onmouseenter="this.src='crab.jpg'; this.alt='CRAB'"
+        onmouseleave="this.src='Crab_Nebula.jpg'; this.alt='imagine another nebula'"> 
+        <img src="eagle_nebula.webp" alt="eagle.jpeg" class = "circle"
+        onmouseenter="this.src='eagle.jpeg';this.alt='EAGLE'"
+        onmouseleave="this.src='eagle_nebula.webp'; this.alt='imagine a third nebula' ">
+        </center>
+    </div>
+</section>
+
+
+
+
+<section id= "music" class="active">
+    <div class="panel">
+        <center> <H1> ★Music is cool!★</H1> 
+        <p> I like  indie songs, and sometimes I play them on the clarinet  </p> 
+        <br>
+        <p>Here's an audio of me playing the song Devil Town with a friend. </p>
+        <br>
+        <audio id="mySong" src="./deviltown.mp3" preload="metadata"></audio>
+        <button id="cd" type= "button" aria-label="Play music!"> <img src= "cd.png" alt="music", height = 150px, width = 150px > </button>
+
+        <br>
+        <a href="https://www.youtube.com/watch?v=KvaxYUfGHnk"> The original song Devil Town by CaveTown</a>
+        <br>
+        <img src="squidward.webp" Me irl height ="250" width="250">
+        </center>
+    </div>
+</section>
+<script>
+    const song = document.getElementById('mySong');
+    const cd = document.getElementById('cd');
+
+    cd.addEventListener('click', function() {
+        if (song.paused){
+            song.play().catch(function(error) {
+                console.log('couldnt play song', error);
+            });
+            } else {
+                song.pause();
+        }
+    });
+    function updateCD() {
+        const isPlaying = !song.paused && !song.ended;
+
+        cd.classList.toggle('playing', isPlaying);
+        cd.setAttribute(
+            'aria-label',
+            isPlaying ? 'Pause music' : 'Play music'
+        )
+    }
+    song.addEventListener('play', updateCD);
+    song.addEventListener('pause',updateCD);
+    song.addEventListener('ended',updateCD);
+
+
+</script>
+</html>
+
+

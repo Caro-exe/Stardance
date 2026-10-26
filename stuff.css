@@ -1,0 +1,123 @@
+body {
+    background-color:rgb(15, 33, 4);
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(86, 117, 22)
+}
+section{
+    display: none; 
+}
+section.active{
+    display: block;
+}
+
+.panel{
+    background-color: rgb(15, 33, 4);
+    min-height: 200px;
+    min-width: 400px;
+    border-radius: 5px; 
+}
+
+.title{
+    background-color: rgb(217, 199, 6);
+    padding: 20px; 
+    border-radius: 5px;
+}
+.imageboarder{
+    background-color: rgb(199, 184, 70);
+    height: 200px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    object-fit: cover; 
+    border-radius: 50%;
+    padding: 10px;
+}
+.text{
+    font-size: 30px;
+    color: rgb(6, 78, 16);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    text-align: center;
+}
+.subtext{
+    font-size: 30px;
+    color: rgb(30, 191, 33);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+    text-align: center; 
+}
+img.sticky {
+    position: sticky;
+    top: 0; 
+}
+
+img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite; 
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+a {
+    display: inline-block; 
+    padding: 5px 10px; 
+    background-color:rgb(142, 236, 154);
+    margin: 5px;
+    text-decoration-line: none;
+    color: rgb(5, 68, 38);
+}
+a:hover {
+    transform: translateX(2px);
+    transform: translateY(2px);
+    color: yellow; 
+}
+a:active {
+    transform: translateX(-2px);
+    transform: translateY(-2px);
+    background-color: blue;
+    color: rgb(61, 25, 146);
+}
+nav a.active{
+    background-color: rgb(61, 25, 146);
+    color: white;
+    border-color:blue
+}
+#cd {
+    height:100px;
+    width: 100px;
+    padding: 0;
+    background: transparent; 
+    cursor: pointer;
+    animation: spin 3s linear infinite;
+    animation-play-state: paused;
+}
+#cd img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#cd.playing {
+    animation-play-state: running;
+ }
+@keyframes spin {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+#cd img:hover{
+    animation: none; 
+}
