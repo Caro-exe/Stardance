@@ -3,3 +3,5 @@ CODE:
 This was made entirely by me in CSS and HTML
 FEATURES: 
 Some of the cool things you can do are click on links, listen to audios and play a guessing game. 
+There's a CD! CLICK ON IT! IT MOVES! IT PLAYS!
+If you find a picture of a nebula, HOVER YOUR MOUSE OVER IT. IT reveals! 
